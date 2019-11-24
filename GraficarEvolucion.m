@@ -1,10 +1,6 @@
 function GraficarEvolucion (M,R,S)
     %Funcion que permite graficar toddos los valores obtenidos. 
     %Recibe S para poder leer de forma adecuada el archivo que contiene los datos.
-%Fecha de elaboracion: 2019/04/22
-%Autor: Morales Flores Victor Leonel
-%Asignatura: Neural Networks
-%Escuela: ESCOM-IPN(MX)
     W=cell(1,M);
     b=cell(1,M);
     rAux=R;

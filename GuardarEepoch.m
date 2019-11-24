@@ -7,10 +7,6 @@ function GuardarEepoch(epoca,Eepoch,opc,tipo)
 %   del mismo si es que existe.
 %Se agrega tipo, donde 0 quiere decir que el error de epoca que se
 %escribira es de entrenamiento y 1 quiere decir que es de validacion
-%Fecha de elaboración: 2019/04/22
-%Autor: Morales Flores Victor Leonel
-%Asignatura: Neural Networks
-%Escuela: ESCOM-IPN(MX)
     nombreArchivo="";
     if(tipo==0)
         nombreArchivo="Eepoch_train.txt";

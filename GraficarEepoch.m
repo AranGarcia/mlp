@@ -1,10 +1,6 @@
 function [ee,ev]= GraficarEepoch (s)
     %Funcion que permite graficar la evolucion del error en cada epoca de
     %aprrendizaje
-%Fecha de elaboración: 2019/04/22
-%Autor: Morales Flores Victor Leonel
-%Asignatura: Neural Networks
-%Escuela: ESCOM-IPN(MX)
     etiquetas="";
      %Abrimos el archivo archivo results todos los valores que se crearon en
     %las n iteraciones 

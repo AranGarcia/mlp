@@ -3,11 +3,6 @@ function [Wbp,bbp] = Backpropagation(W,b,a,M,func,e,alfa,p)
 %   Implementa el algoritmo backpropagation obteniendo las 
 %   F(n)[derivadas de las funciones], las sensitividades y la propagacion
 %   hacia atras del error
-%Fecha de elaboración: 2019/05/11
-%Autor: Morales Flores Victor Leonel
-%Asignatura: Neural Networks
-%Escuela: ESCOM-IPN(MX)
-
     %Generamos celdas para almacenar los valores de F(n) y sensitividad de
     %cada capa; asi como el nuevo valor de W(Wbp) y b(bbp) que retornara la funcion
     Fns=cell(1,M);

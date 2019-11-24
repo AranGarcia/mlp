@@ -6,10 +6,6 @@ function GuardarArchivo(epoch,Win,bin,M,opc)
 %   se generaron esos valores. opc permite que decidamos entre 'w' para
 %   reescribir el archivo en caso que exista o 'a' para escribir al final 
 %   del mismo si es que existe.
-%Fecha de elaboración: 2019/03/07
-%Autor: Morales Flores Victor Leonel
-%Asignatura: Neural Networks
-%Escuela: ESCOM-IPN(MX)
     for i=1:M
        textW="W"+num2str(i)+".txt";
        textb="b"+num2str(i)+".txt";

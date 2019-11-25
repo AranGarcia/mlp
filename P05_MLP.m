@@ -11,30 +11,28 @@ opcDatos = 2;
 v1txt = 'C:\\Users\\docto\\OneDrive\\Documentos\\escuela\\neuralnetworks\\practicas\\p5\\reloaded\\arquitecturas\\v1pol2.txt';
 v2txt = 'C:\\Users\\docto\\OneDrive\\Documentos\\escuela\\neuralnetworks\\practicas\\p5\\reloaded\\arquitecturas\\v2pol2.txt';
 % Indica el factor de aprendizaje
-alfa = 0.05;
+alfa = 0.025;
 % Indica el maximo de Epocas: 
-max_epoch= 10;
+max_epoch= 300;
 % Indica el error maximo tolerable
-eepoch = 0.01
-% Indica cada cuanto sera° la Epoca de validacion
+eepoch = 0.01;
+% Indica cada cuanto ser· la Epoca de validacion
 eepoch_val= 2;
 % Indica el numero maximo de intentos del error de validacion
-num_val = 3;
+num_val = 20;
 % Usara archivo para pesos y bias? 1-Si. 0-No
 archi = 0;
 
 [R,S,func] = lecturaVectores(v1txt, v2txt);
-Eepoch=0;
-eStoping=fopen('EStoping.txt','w');%txt donde se guardaran los valores del error de epoca
-Final=fopen('ValoresF.txt','w');%txt donde se guardaran los valores finales
+Eepoch = 0;
+% txt donde se guardaran los valores del error de epoca
+eStoping=fopen('EStoping.txt','w');
+% txt donde se guardaran los valores finales
+Final=fopen('ValoresF.txt','w');
 vf=[0,0,0];
 [R,S,func] = lecturaVectores(v1txt, v2txt);
 [p,targets]=lecturaDataSet(archivoP);
 
-%Aqu√≠ se seleccionan los valores que se agarraban en la funci√≥n lecturaDataset();
-%R=Vector1(1,1);
-%S=Vector1(2:end,1);
-%func=Vector2(1:end,1);
 %Generacion aleatoria de pesos y bias----------------------------------
 [fS,cS]=size(S);
 %Numero de capas
@@ -57,7 +55,7 @@ else
     [W,b,epoca] = RecuperarDatos(M,R,S);
 end
 
-%Dividimos los datos
+% DivisiÛn de datos
 [ptrain,ttrain,pval,tval,ptest,ttest]=separarDatos(p,targets,opcDatos);
 %%%%%%%%%%%%%%%%%%%%%%%%%
 WStopping=cell(1,M);
@@ -158,7 +156,7 @@ ImprimirFinal(vf,Final);%Guarda el valor de error de epoca el cual se graficara)
 GraficarPolinomio(ptest,ttest,ptest,y);
 GraficarEvolucion(M,R,S);
 
-fprintf("\n\n\nError de Entrenamiento Final:%f",vf(1));
-fprintf("\nError de Validacion Final:%f",vf(2));
-fprintf("\nError de Prueba Final:%f\n",vf(3));
+fprintf("\n\n\nError de Entrenamiento Final: %f",vf(1));
+fprintf("\nError de Validacion Final: %f",vf(2));
+fprintf("\nError de Prueba Final: %f\n",vf(3));
 
